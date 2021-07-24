@@ -1,0 +1,86 @@
+*{
+    font-family: 'Hind', sans-serif;
+    color: #140404;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+hr {
+    border: none;
+    border-top: 3px double #831515;
+    border-bottom: 3px double #421111;
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+}
+
+.all {
+    border-bottom: 2px solid #831515;
+    font-weight: bolder;
+    font-size: 22px;
+}
+#tdID {
+    padding-top: 20px;
+}
+
+#titleID {
+    margin: 20px 0;
+}
+
+#titleNameID {
+    margin-right: 36px;
+}
+
+#addTitle {
+    background:linear-gradient(burlywood, #240909 70%) ;
+    color: seashell;
+    font-weight: bold;
+}
+
+#authorID {
+    margin: 20px 0;
+
+}
+#authorNameID {
+    margin-right: 14px;
+}
+
+#addAuthor {
+    background:linear-gradient(#240909, burlywood 100%) ;
+    color:seashell;
+    font-weight: bold;
+}
+
+#readID {
+    margin: 30px 0;
+}
+
+
+#addBooKButton {
+    margin: 20px 0;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 15px;
+    font-weight: bold;
+    color:burlywood;
+    background:linear-gradient(#831515, #240909) ;
+}
+
+.bg-container::after{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: fit-content;
+
+    display: block;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: -1;
+    min-height: 1200px;
+}

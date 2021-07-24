@@ -1,14 +1,12 @@
-const { library } = require("webpack");
-
 console.log("Hello World!\n==========\n");
 
 // PROJECT Section
 console.log("PROJECT:\n==========\n");
 
 
-class book 
+class Book 
 {
-    constructor (id,title, author, read) 
+    constructor (id, title, author, read) 
     {
         this.id = id;
         this.title = title;
@@ -29,16 +27,17 @@ class Library
                 title: "Naked in Death",
                 author: "JD Robb",
                 read: true,
-            }
+            },
         ];
+        
         this.markRead = this.markRead.bind(this);
-        this.addBookButton = this.addBookButton.bind(this);
+        this.addBook = this.addBook.bind(this);
     }
 
 
-    markRead(checkBox) 
+    markRead(checkbox) 
     {
-        for(let book of library.books) 
+        for (let book of library.books) 
         {
             if (book.id == checkbox.id)
             {
@@ -50,13 +49,13 @@ class Library
         }   
     }
 
-    addABook()
+    addBook()
     {
-        let title = document.getElementById("titleIn").value;
-        let author = document.getElementById("authorIn").value;
-        let read = document.getElementById ("readPropertyCheckBos").checked;
+        let title = document.getElementById("addTitle").value;
+        let author = document.getElementById("addAuthor").value;
+        let read = document.getElementById ("readBookBox").checked;
 
-        let newBook = new book(this.bookCount, title, author, read);
+        let newBook = new Book(this.bookCount, title, author, read);
         this.books.push(newBook);
 
         let newRow = document.createElement("tr");
@@ -68,13 +67,13 @@ class Library
         td2.textContent = newBook.author;
 
         let td3 = document.createElement("td");
-        let checkBoxx = document.createElement("input");
-        checkBoxx.id = this.bookCount;
-        checkBoxx.type = "checkbox";
-        checkBoxx.checked = newBook.read;
-        checkBoxx.disabled = newBook.read;
-        checkBoxx.addEventListener("click", () => library.markRead(checkBoxx));
-        td3.appendChild(checkBoxx);
+        let ckBox = document.createElement("input");
+        ckBox.id = this.bookCount;
+        ckBox.type = "checkbox";
+        ckBox.checked = newBook.read;
+        ckBox.disabled = newBook.read;
+        ckBox.addEventListener("click", () => library.markRead(ckBox));
+        td3.appendChild(ckBox);
 
         newRow.appendChild(td1);
         newRow.appendChild(td2);
@@ -88,8 +87,10 @@ class Library
 
 let library = new Library();
 
-let button = document
-    .getElementById("addBookButton")
+let btn = document
+    .getElementById("addBooKButton")
     .addEventListener("click", () =>
-        library.addBookButton(library.books, library.bookCount)
+        library.addBook(library.books, library.bookCount)
     );
+
+

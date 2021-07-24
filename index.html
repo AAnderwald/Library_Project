@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind&display=swap" rel="stylesheet">
+    <title>Library Project</title>
+    <style>
+      body{
+          background-image: url(libraryImg.jpeg); 
+          background-position: center center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+      }
+  </style>
+  </head>
+  <body class="bg-container" >
+    <main
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      "
+    >
+      <div>
+        <h1>Library Project</h1>
+        <div id="library">
+          <!-- Add table here -->
+          <table id="table" style="min-width: 680px; margin: 2rem">
+            <thead>
+              <tr>
+                <th class="all">Title</th> 
+                <th class="all">Author</th>
+                <th class="all">Read</th>
+                <hr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td id="tdID">Naked in Death</td>
+                <td id="tdID">JD Robb</td>
+                <td id="tdID">
+                  <input
+                    type="checkbox"
+                    name="read"
+                    id="readLibraryCheckbox"
+                    checked
+                    disabled
+                  />
+                </td>
+              </tr>  
+            </tbody>
+          </table>  
+        </div>
+        <div>
+          <div id="titleID">
+            <label id="titleNameID" for="addTitle"> Title name: </label>
+            <input type="text" name="title" id="addTitle"/>  
+          </div>
+          <div id="authorID">
+            <label id="authorNameID" for="addAuthor"> Author name: </label>
+            <input type="text" name="author" id="addAuthor" /> 
+          </div>
+          <div id="readID">
+            <label for="readBookBox"> Have you read the book? </label>
+            <input type="checkbox" name="read" id="readBookBox"/>  
+          </div>
+          <button id="addBooKButton"> Add a new book </button>
+        </div>
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
