@@ -2,9 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
     <title>Library Project</title>
-    
   </head>
   <body>
     <main
@@ -43,12 +44,12 @@
               </tr>  
               <tr>
                 <td>                  
-                  <label class="title" for="title"> </label>
-                  <input type="text" name="title" id="title" aria-label="Name">  
+                  <label class="titleIn" for="title"> </label>
+                  <input type="text" name="title" id="titleIn" aria-label="Name">  
                 </td>
                 <td>                  
-                  <label class="author" for="author"> </label>
-                  <input type="text" name="author" id="author" aria-label="Author"> 
+                  <label class="authorIn" for="author"> </label>
+                  <input type="text" name="author" id="authorIn" aria-label="Author"> 
                 </td>
                 <td>                  
                   <label class="readPropertyCheckBox" for="readPropertyCheckBox"> </label>
@@ -58,10 +59,10 @@
             </tbody>
           </table>
         </div>
-        <input type="submit" value="Add New Book">
+        <button id="addBookButton" type="submit"> Add a new book </button>
       </main>
 
 
-    <script src="app.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
